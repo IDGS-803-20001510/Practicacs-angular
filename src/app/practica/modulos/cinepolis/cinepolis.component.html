@@ -1,0 +1,33 @@
+<div class="container">
+    <div>
+        <h1>Cinepolis</h1>
+    </div>
+    <div class="row">
+        <mat-form-field>
+            <input matInput type="text" [(ngModel)]="nombre" placeholder="Nombre">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="number" [(ngModel)]="cantidad" placeholder="Cantidad compradores">
+        </mat-form-field>
+        <mat-radio-group name="opciones" [(ngModel)]="opcionSelect">
+            <mat-radio-button *ngFor="let op of opcion" name="opciones" [value]="op"
+            style="margin: 10px;">
+            {{op}}
+        </mat-radio-button>
+        </mat-radio-group>
+        <mat-form-field>
+            <input matInput type="number" [(ngModel)]="cantidadB" placeholder="Cantidad de Boletos">
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="ticket()" >Procesar</button>
+         <button mat-raised-button color="accent" (click)="clear()" >Limpiar</button> 
+    </div>
+<hr>
+<div class="row">
+    <h3>
+        <p>Nombre: {{nombre}}</p>
+        <p>Cantidad maxima de boletas permitidas: {{persona}}</p>
+        <p>Cantidad de boletas compradas: {{cantidadB}}</p>
+        <p>Total a pagar: {{resultado}} {{resultado2}}</p>
+    </h3>
+</div>
+</div>
