@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { D2PuntosModule } from './practica/modulos/d2-puntos/d2-puntos.module';
 import { McinepolisModule } from './practica/modulos/mcinepolis/mcinepolis.module';
+import { MresistenciasModule } from './practica/modulos/mresistencias/mresistencias.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { McinepolisModule } from './practica/modulos/mcinepolis/mcinepolis.modul
     AppRoutingModule,
     BrowserAnimationsModule,
     D2PuntosModule,
-    McinepolisModule
+    McinepolisModule,
+    MresistenciasModule
   ],
   providers: [],
   bootstrap: [AppComponent]

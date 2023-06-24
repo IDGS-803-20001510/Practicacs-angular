@@ -13,7 +13,9 @@ export class CinepolisComponent {
   persona!: number;
   resultado = "";
   resultado2!:number;
-  nombre1 = this.nombre;
+
+  nombreB: string = "";
+  cantidadBB: number = 0;
 
   opcionSelect: string = 'Si'
 
@@ -23,6 +25,8 @@ export class CinepolisComponent {
   ]
 
   ticket() {
+    this.nombreB = this.nombre;
+    this.cantidadBB = this.cantidadB;
     if (this.cantidad < 2) {
       this.persona = this.cantidad * 7
       switch (this.opcionSelect) {

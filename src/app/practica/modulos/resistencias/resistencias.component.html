@@ -1,0 +1,55 @@
+<div class="container">
+    <div>
+        <h1>Calculadora de resistencias</h1>
+    </div>
+    <div class="row">
+        <mat-label>Banda 1</mat-label>
+        <mat-select [(ngModel)]="banda1Select">
+            <mat-option *ngFor="let color of colores; let i = index"  [value]="color" [style.background]="color">{{selectColores[i]}}</mat-option>
+        </mat-select> <br>
+        <mat-label>Banda 2</mat-label>
+        <mat-select [(ngModel)]="banda2Select">
+            <mat-option *ngFor="let color of colores; let i = index"  [value]="color" [style.background]="color">{{selectColores[i]}}</mat-option>
+        </mat-select> <br>
+        <mat-label>Banda 3</mat-label>
+        <mat-select [(ngModel)]="banda3Select">
+            <mat-option *ngFor="let color of colores; let i = index" [value]="color" [style.background]="color">{{selectColores[i]}}</mat-option>
+        </mat-select> <br>
+        <mat-label>Tolerancia</mat-label>
+        <mat-radio-group name="opciones" [(ngModel)]="toleranciaSelect">
+            <mat-radio-button *ngFor="let to of tolerancia" name="opciones" [value]="to"
+            style="margin: 10px;">
+            {{to}}
+        </mat-radio-button>
+        </mat-radio-group> <br>
+        <button mat-raised-button color="primary" (click)="calcularResistencias()" >Calcular</button>
+        <button mat-raised-button color="accent" (click)="clear()" >Limpiar</button>
+    </div>
+    <hr>
+    <div class="container">
+        <table class="table table-bordered border-primary">
+            <thead>
+                <tr class="text-center">
+                    <th scope="col">Col Banda1</th>
+                    <th scope="col">Col Banda2</th>
+                    <th scope="col">Col Banda3</th>
+                    <th scope="col">Tolerancia</th>
+                    <th scope="col">Valor</th>
+                    <th scope="col">Minimo</th>
+                    <th scope="col">Maximo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td [style.background-color]="colbanda1">{{colbanda1}}</td>
+                    <td [style.background-color]="colbanda2">{{colbanda2}}</td>
+                    <td [style.background-color]="colbanda3">{{colbanda3}}</td>
+                    <td [style.background-color]="coltolerancia">{{coltolerancia}}</td>
+                    <td>{{resistencia}}</td>
+                    <td>{{toleranciaMinima}}</td>
+                    <td>{{toleranciaMaxima}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
