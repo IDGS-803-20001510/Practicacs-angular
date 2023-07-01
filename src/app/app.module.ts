@@ -7,11 +7,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { D2PuntosModule } from './practica/modulos/d2-puntos/d2-puntos.module';
 import { McinepolisModule } from './practica/modulos/mcinepolis/mcinepolis.module';
 import { MresistenciasModule } from './practica/modulos/mresistencias/mresistencias.module';
+import { MenuComponent } from './practica/modulos/menu/menu.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -19,7 +21,8 @@ import { MresistenciasModule } from './practica/modulos/mresistencias/mresistenc
     BrowserAnimationsModule,
     D2PuntosModule,
     McinepolisModule,
-    MresistenciasModule
+    MresistenciasModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

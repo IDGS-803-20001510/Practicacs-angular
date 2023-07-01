@@ -16,4 +16,7 @@ calcular(){
    let distancia = Math.pow(this.puntox2 - this.puntox1, 2) + Math.pow(this.puntoy2 - this.puntoy1, 2)
    this.resultado = Math.sqrt(distancia);
 }
+clear(){
+  window.location.reload();
+}
 }
