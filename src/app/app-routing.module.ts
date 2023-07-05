@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { Ds2PuntosComponent } from './practica/modulos/ds2-puntos/ds2-puntos.component';
 import { CinepolisComponent } from './practica/modulos/cinepolis/cinepolis.component';
 import { ResistenciasComponent } from './practica/modulos/resistencias/resistencias.component';
+import { PizzeriaComponent } from './practica/modulos/pizzeria/pizzeria.component';
 
 const routes: Routes = [
 
@@ -10,6 +11,7 @@ const routes: Routes = [
   {path:'D2D', component: Ds2PuntosComponent},
   {path:'Cinepolis', component: CinepolisComponent},
   {path:'Resistencias', component: ResistenciasComponent},
+  {path: 'Pizzeria', component: PizzeriaComponent}
 ];
 
 @NgModule({
